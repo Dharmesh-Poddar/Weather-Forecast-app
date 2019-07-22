@@ -10,7 +10,7 @@ class App extends React.Component{
       const api_call =await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${API_Key}');
        
         const data =await api_call.json();
-        
+
     }
    
    render()
@@ -18,7 +18,7 @@ class App extends React.Component{
      return(
     <div>
      <Title/>
-      <Form />
+      <Form getWeather={this.getWeather}/>
       <Weather/>
 
     </div>

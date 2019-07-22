@@ -4,7 +4,7 @@ export default class Form extends React.Component{
 
     render(){
         return(
-          <form>
+          <form onSubmit={this.props.getWeather}>
               <input type="text" name="city" placeholder="city..">
               </input>
           
