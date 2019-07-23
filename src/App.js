@@ -1,10 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Title from './Components/Title';
 import Form from './Components/Form';
 import Weather from './Components/Weather';
-let API_Key= "4d5e7c1a2cd8f2338eb3f0d0b21ce3b0";
+const API_Key= "4d5e7c1a2cd8f2338eb3f0d0b21ce3b0";
 
 class App extends React.Component{
+
+    state={
+      temperature: undefined,
+      city: undefined,
+      country: undefined,
+      humidity: undefined,
+      description: undefined,
+      error: undefined
+    }
+
+
     getWeather =async(e) =>{
                e.preventDefault();
       const city= e.target.elements.city.value;
