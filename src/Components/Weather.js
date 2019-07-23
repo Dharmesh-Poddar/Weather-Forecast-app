@@ -6,7 +6,7 @@ export default class Weather extends React.Component{
 
             return(
                 <div>
-                  <p>  Dilbar </p>
+                  <p>Location: {this.props.city} ,{this.props.country}</p>
                 </div>
             )
             ;
